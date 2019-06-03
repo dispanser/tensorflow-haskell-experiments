@@ -1,0 +1,18 @@
+resolver: lts-13.19
+packages:
+  - '.'
+extra-deps:
+  - ../../thirdparty/tensorflow-haskell/tensorflow
+  - ../../thirdparty/tensorflow-haskell/tensorflow-records
+  - ../../thirdparty/tensorflow-haskell/tensorflow-proto
+  - ../../thirdparty/tensorflow-haskell/tensorflow-core-ops
+  - ../../thirdparty/tensorflow-haskell/tensorflow-opgen
+  - ../../thirdparty/tensorflow-haskell/tensorflow-ops
+  - snappy-framing-0.1.2
+  - snappy-0.2.0.2
+
+# allow-newer: true
+
+nix:
+  enable: true
+  packages: [ snappy protobuf libtensorflow ]
