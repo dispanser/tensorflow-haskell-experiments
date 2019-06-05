@@ -1,6 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-import Test.Hspec
 import Test.Tasty
 import Test.Tasty.Hspec (testSpec)
 import TFE.LinearRegressionTest (linearRegressionSpec)

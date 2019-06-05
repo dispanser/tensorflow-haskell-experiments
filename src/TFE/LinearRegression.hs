@@ -16,8 +16,8 @@ simpleLinearRegression x y = TF.runSession $ do
     b0 <- TF.initializedVariable 0
     b1 <- TF.initializedVariable 0
 
-    let yHat = (x' `TF.mul` TF.readValue b1) `TF.add` TF.readValue b0
-        loss = TF.square $ yHat `TF.sub` y'
+    let yHat = (x' * TF.readValue b1) + TF.readValue b0
+        loss = TF.square $ yHat - y'
 
     -- Optimize with gradient descent.
     trainStep <- TF.minimizeWith (TF.gradientDescent 0.01) loss [b0, b1]
