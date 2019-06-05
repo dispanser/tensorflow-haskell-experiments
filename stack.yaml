@@ -11,8 +11,6 @@ extra-deps:
   - snappy-framing-0.1.2
   - snappy-0.2.0.2
 
-# allow-newer: true
-
 nix:
   enable: true
   packages: [ snappy protobuf libtensorflow ]

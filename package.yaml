@@ -3,7 +3,7 @@ version: '0.0.0'
 category: template
 synopsis: Experimental Tensorflow
 description: >
-    playing around with the haskell bindings of tensorflow, from 
+    playing around with the haskell bindings of tensorflow
 author: Thomas Peiselt
 github: dispanser/tensorflow-experiments
 license: MIT
@@ -20,20 +20,20 @@ library:
     - tensorflow-ops
     - tensorflow-records
     - random 
+    - vector
     - HUnit
+
 
 tests:
   tasty:
     source-dirs: tasty
-    main: TastyTests.hs
+    main: Main.hs
     dependencies:
       - tensorflow-experiments
       - hspec
       - QuickCheck
-      - test-invariant
       - tasty
       - tasty-quickcheck
-      - tasty-hunit
       - tasty-hspec
 
 benchmarks:
