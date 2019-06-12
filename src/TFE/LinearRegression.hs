@@ -18,8 +18,6 @@ import qualified TensorFlow.Variable           as TF
 import qualified TensorFlow.Logging            as TFL
 
 import qualified Readme                        as R
-import           Data.Tuple                     ( swap )
-
 
 defaultLearnRate :: Float
 defaultLearnRate = 0.00001
