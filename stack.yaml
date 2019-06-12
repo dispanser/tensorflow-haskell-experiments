@@ -2,15 +2,23 @@ resolver: lts-13.19
 packages:
   - '.'
 extra-deps:
-  - ../../thirdparty/tensorflow-haskell/tensorflow
-  - ../../thirdparty/tensorflow-haskell/tensorflow-records
-  - ../../thirdparty/tensorflow-haskell/tensorflow-proto
-  - ../../thirdparty/tensorflow-haskell/tensorflow-core-ops
-  - ../../thirdparty/tensorflow-haskell/tensorflow-opgen
-  - ../../thirdparty/tensorflow-haskell/tensorflow-ops
+  - git: https://github.com/tensorflow/haskell.git
+    commit: 1fbd5d41dd5d1ec35fa9668bd9ceb63200e4d933
+    subdirs:
+      - tensorflow
+      - tensorflow-ops
+      - tensorflow-core-ops
+      - tensorflow-logging
+      - tensorflow-proto
+      - tensorflow-opgen
+      - tensorflow-test
+      - tensorflow-mnist
+      - tensorflow-records
+      - tensorflow-records-conduit
+      - tensorflow-mnist-input-data
   - snappy-framing-0.1.2
   - snappy-0.2.0.2
 
 nix:
   enable: true
-  packages: [ snappy protobuf libtensorflow ]
+  packages: [ snappy protobuf libtensorflow zlib ]

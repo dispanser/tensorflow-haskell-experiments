@@ -6,7 +6,7 @@ import TFE.LinearRegressionTest (linearRegressionSpec)
 
 main :: IO ()
 main = do
-  s <- testSpec "hspec tests" linearRegressionSpec
-  let tests = testGroup "all tests" [ s ]
+  ols <- testSpec "hspec tests" linearRegressionSpec
+  let tests = testGroup "all tests" [ ols ]
   defaultMain tests
 

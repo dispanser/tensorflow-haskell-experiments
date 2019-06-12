@@ -15,8 +15,10 @@ dependencies:
 library:
   source-dirs: src
   dependencies:
+    - proto-lens
     - tensorflow
     - tensorflow-core-ops
+    - tensorflow-logging
     - tensorflow-ops
     - tensorflow-records
     - random 
@@ -29,19 +31,11 @@ tests:
     source-dirs: tasty
     main: Main.hs
     dependencies:
+      - csv
+      - random
       - tensorflow-experiments
       - hspec
       - QuickCheck
       - tasty
       - tasty-quickcheck
       - tasty-hspec
-
-benchmarks:
-  benchmark-criterion:
-    main: Bench.hs
-    source-dirs: bench
-    ghc-options:
-      - -threaded
-    dependencies:
-      - tensorflow-experiments
-      - criterion
